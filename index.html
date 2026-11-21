@@ -7119,7 +7119,7 @@
       const label = card.querySelector('.app-title-row p')?.textContent?.trim() || 'Bản cập nhật mới';
       const cover = card.querySelector('.app-media img')?.getAttribute('src') || '';
       const type = card.dataset.platform === 'android' ? 'Android' : 'iOS';
-      const access = card.dataset.access === 'key' ? '1 KEY ALL BẢN' : 'NO KEY';
+      const access = card.dataset.access === 'key' ? 'CÓ KEY' : 'NO KEY';
       item.innerHTML = `<a class="ns-latest-cover" data-jump-app="${card.id}" href="#${encodeURIComponent(card.id)}"><img loading="lazy" alt="" src=""><span class="ns-latest-tag">MỚI #${String(index+1).padStart(2,'0')}</span></a><div class="ns-latest-info"><div class="ns-latest-date"></div><strong></strong><div class="ns-latest-type"></div></div><div class="ns-latest-actions"><a class="ns-latest-open" href="${card.querySelector('.download-btn')?.getAttribute('href') || (`#${encodeURIComponent(card.id)}`)}" target="_blank" rel="noopener noreferrer">Tải xuống ↗</a><button class="ns-latest-copy" data-copy-app="${card.id}" type="button" aria-label="Sao chép link ứng dụng">${shareIcon}</button></div>`;
       item.querySelector('img').src = cover;
       item.querySelector('.ns-latest-date').textContent = label;
